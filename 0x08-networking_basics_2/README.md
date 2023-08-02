@@ -1,0 +1,8 @@
+# Networking Basics #1
+
+# Objectives
+
+1. LOCAL HOST/127.0.0.1
+2. O.O.O.O
+3. HOST FILES
+4. HOW T DISPLAY YOUR MACHINES NETWORK INTERFACES
