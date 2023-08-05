@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script dislays all active IPV4 IPs
 
-ifconfig | grep 'inet ' | awk '{print $2}'
+ifconfig | grep -Po 'inet addr:\K\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
