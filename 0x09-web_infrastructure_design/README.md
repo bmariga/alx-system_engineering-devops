@@ -16,3 +16,7 @@ For this project, we expect you to look at these concepts:
 - Diagrams covering the web stack you built with the sysadmin/devops track projects.
 - Explain system redundancy
 - Know all the mentioned acronyms: LAMP, SPOF, QPS
+
+# Author
+
+Bruce Mariga Nyaribo
