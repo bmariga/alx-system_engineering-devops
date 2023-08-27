@@ -1,6 +1,6 @@
 <h2 align="center">Web Infrastructure Design</h2>
 
-# Concepts
+<h3>Concepts</h3>
 
 For this project, we expect you to look at these concepts:
 
