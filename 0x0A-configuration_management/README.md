@@ -31,4 +31,5 @@ Install puppet
 Puppet 5 Docs: <link>https://www.puppet.com/docs/puppet/5.5/puppet_index.html</link>
 
 Install puppet-lint
+
 `$ gem install puppet-lint`
