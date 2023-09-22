@@ -17,14 +17,18 @@ Obviously writing Puppet code for your infrastructure requires an investment of 
 That was me ^\_^‘: <link>https://twitter.com/devopsreact/status/836971570136375296</link>
 
 Install puppet
+
 `$ apt-get install -y ruby=1:2.7+1 --allow-downgrades`
+
 `$ apt-get install -y ruby-augeas`
+
 `$ apt-get install -y ruby-shadow`
+
 `$ apt-get install -y puppet`
 
 <p>You do not need to attempt to upgrade versions. This project is simply a set of tasks to familiarize you with the basic level syntax which is virtually identical in newer versions of Puppet.</p>
 
-Puppet 5 Docs
+Puppet 5 Docs: <link>https://www.puppet.com/docs/puppet/5.5/puppet_index.html</link>
 
 Install puppet-lint
 `$ gem install puppet-lint`
