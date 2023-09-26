@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# transfers a file from our client to a server
+# path_to_file="$1"
+# ip="$2"
+# username="$3"
+# path_to_ssh_key="$4"
+# scp must transfer the file to the user home directory ~/
+# Strict host key checking must be disabled when using scp
+
+if [ "$#" -ne 4 ]; then
+    echo "Usage: $0 PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+    exit 1
+fi
+
+# Assign parameters to variables
+FILE="$1"
+IP="$2"
+USERNAME="$3"
+SSH_KEY="$4"
+
+# Disable strict host key checking for scp
+SSH_OPTIONS="-o StrictHostKeyChecking=no"
+
+# Transfer the file using scp
+scp $SSH_OPTIONS -i "$SSH_KEY" "$FILE" "$USERNAME@$IP:~/"
+
+# Check the scp exit status and display appropriate message
+if [ $? -eq 0 ]; then
+    echo "File transfer successful."
+else
+    echo "File transfer failed."
+fi
+
