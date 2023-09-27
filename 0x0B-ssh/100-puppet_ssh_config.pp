@@ -1,14 +1,17 @@
-# Client configuration file with Puppet
-# Puppet to make changes in or config file
+# Seting up my client config file
+# using puppet to make changes to the default ssh config file
 
-file { '/etc/ssh/ssh_config';
-	ensure => present,   
-
-content =>"
-
-	#SSH client config
-	Host* 
-	IdentityFile ~/.ssh/school
-	PasswordAuthentication no 
-",
+file_line { 'Declare identity file':
+  path    => '/etc/ssh/ssh_config',
+  line    => '    IdentityFile ~/.ssh/school',
+  match   => '^(\s*)IdentityFile\s.*',
+  ensure  => present,
 }
+
+file_line { 'Turn off passwd auth':
+  path    => '/etc/ssh/ssh_config',
+  line    => '    PasswordAuthentication no',
+  match   => '^(\s*)PasswordAuthentication\s.*',
+  ensure  => present,
+}
+
