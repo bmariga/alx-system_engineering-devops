@@ -1,0 +1,13 @@
+frontend haproxy_balancer
+    bind *:80
+    bind *:443 ssl crt /etc/letsencrypt/live/www.marigabruce.tech/fullchain.pem 
+    redirect scheme https code 301 if !{ ssl_fc }
+    mode http
+    default_backend webservers
+
+backend webservers
+    balance roundrobin
+    mode http
+    server 280669-web-01 34.202.233.215:80 check
+    server 280669-web-02 54.236.25.198:80 check
+
