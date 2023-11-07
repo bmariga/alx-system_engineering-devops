@@ -1,5 +1,7 @@
 # Advanced API
 
+![API's](C:\Users\HP\alx-system_engineering-devops\0x16-api_advanced)
+
 - How to read API documentation to find the endpoints you’re looking for
 - How to use an API with pagination
 - How to parse JSON results from an API
